@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -78,7 +79,7 @@
       <th scope="row">{{ format.format_note }}</th>
       <td>{{ format.ext }}</td>
       <td>{{ format.filesize }}</td>
-      <td><a class="btn btn-primary" href="">Download</a></td>
+      <td><a class="btn btn-primary" href="{% static 'downloads/{format}%}">Download</a></td>
     </tr>
   {% endfor %}
   </tbody>
