@@ -12,6 +12,10 @@
   </head>
   <body>
         {% include 'base/navbar.html' %}
+        <main class="container-fluid">
+          {% block content %}{% endblock %}
+        </main>
+        {% include 'base/footer.html' %}
 
     <!-- Optional JavaScript; choose one of the two! -->
 

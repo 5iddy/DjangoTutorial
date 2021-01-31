@@ -17,12 +17,14 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-
+from accounts.views import register_page, logout_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('yt/', include('youtube.urls')),
+    path('signup/', register_page, name='signup'),
+    path('logout', logout_page, name='logout'),
     path('', include('pages.urls')),
-    path('yt/', include('youtube.urls'))
 ]
 
 if settings.DEBUG:

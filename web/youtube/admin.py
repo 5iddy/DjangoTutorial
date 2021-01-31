@@ -1,6 +1,6 @@
 from django.contrib import admin
 
 # Importing models
-from .models import YtVid
+from .models import YoutubeVideo
 # Register your models here.
-admin.site.register(YtVid)
+admin.site.register(YoutubeVideo)

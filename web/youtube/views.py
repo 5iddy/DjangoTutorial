@@ -2,6 +2,8 @@ from django.shortcuts import render
 from . import models
 from youtube_dl import YoutubeDL
 import os
+
+
 # Create your views here.
 def fetch_info(url):
     with YoutubeDL() as ytinfo:
@@ -18,7 +20,7 @@ def home_view(request):
     context = {}
     if request.method == 'POST':
         url = request.POST.get('url')
-        info = models.YtVid.fetch_info(url)
+        info = models.YoutubeVideo.fetch_info(url)
         context['formats'] = info['formats']
 
     return render(request, 'home/index.html', context)

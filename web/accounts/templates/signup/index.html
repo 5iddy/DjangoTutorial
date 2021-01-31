@@ -1,0 +1,20 @@
+{% extends 'base/base.html'%}
+{% block title %}
+Sign up page
+{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col col-xxl-6 border-end">
+        <div class="container-fluid">
+            <form method="post" action="">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+    <div class="col col-xxl-6">
+
+    </div>
+</div>
+{% endblock %}
